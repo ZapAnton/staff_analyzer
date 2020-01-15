@@ -1,13 +1,14 @@
 public class StaffAnalyzer {
+    public static final String HELP_TEXT = String.join(
+        System.getProperty("line.separator"),
+        "A program to analyze staff members in the company",
+        "Arguments:",
+        "  staff <ID> - Show information about a staff member. If no ID is provided, show all staff."
+    );
+
     public static void main(String[] args) {
         if (args.length == 0) {
-            final String helpText = String.join(
-                System.getProperty("line.separator"),
-                "A program to analyze staff members in the company",
-                "Arguments:",
-                "  staff <ID> - Show information about a staff member. If no ID is provided, show all staff."
-            );
-            System.out.println(helpText);
+            System.out.println(StaffAnalyzer.HELP_TEXT);
             return;
         }
         final String command = args[0];
