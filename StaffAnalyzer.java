@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-
-
 public class StaffAnalyzer {
     public static final String HELP_TEXT = String.join(
         System.getProperty("line.separator"),
@@ -9,18 +6,10 @@ public class StaffAnalyzer {
         "  staff <ID> - Show information about a staff member. If no ID is provided, show all staff."
     );
 
-    public static ArrayList<StaffMember> staffMembers = null;
-
-    static {
-        staffMembers = new ArrayList<StaffMember>();
-        staffMembers.add(new StaffMember("Test 1"));
-        staffMembers.add(new StaffMember("Test 2"));
-        staffMembers.add(new StaffMember("Test 3"));
-        staffMembers.add(new StaffMember("Test 4"));
-    }
+    static StaffStorage staffStorage = new StaffStorage();
 
     static void showStaff() {
-        for (var staffMember: StaffAnalyzer.staffMembers) {
+        for (var staffMember: staffStorage.getStaffMembers()) {
             System.out.println(staffMember);
         }
     }
