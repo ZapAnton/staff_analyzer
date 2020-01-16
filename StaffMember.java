@@ -15,6 +15,10 @@ public class StaffMember {
         return generatedID;
     }
 
+    public int getID() {
+        return this.id;
+    }
+
     @Override
     public String toString() {
         final String staffMemberString = String.format(

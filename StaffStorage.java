@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Optional;
 
 
 class StaffStorage {
@@ -14,5 +15,13 @@ class StaffStorage {
 
     public ArrayList<StaffMember> getStaffList() {
         return this.staffMembers;
+    }
+
+    public Optional<StaffMember> getMemberById(Integer memberID) {
+        final Optional<StaffMember> staffMember = this.staffMembers
+            .stream()
+            .filter(member -> member.getID() == memberID)
+            .findFirst();
+        return staffMember;
     }
 }
