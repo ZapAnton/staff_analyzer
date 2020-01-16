@@ -12,7 +12,7 @@ class StaffStorage {
         staffMembers.add(new StaffMember("Test 4"));
     }
 
-    public ArrayList<StaffMember> getStaffMembers() {
+    public ArrayList<StaffMember> getStaffList() {
         return this.staffMembers;
     }
 }

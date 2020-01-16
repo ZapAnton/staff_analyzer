@@ -9,9 +9,10 @@ public class StaffAnalyzer {
     static StaffStorage staffStorage = new StaffStorage();
 
     static void showStaff() {
-        for (var staffMember: staffStorage.getStaffMembers()) {
-            System.out.println(staffMember);
-        }
+        staffStorage
+            .getStaffList()
+            .stream()
+            .forEach(System.out::println);
     }
 
     static void parseArguments(String[] args) {
