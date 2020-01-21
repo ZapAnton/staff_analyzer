@@ -1,3 +1,6 @@
+package analyzer;
+
+
 public class StaffMember {
     private static int nextID = 1;
 
